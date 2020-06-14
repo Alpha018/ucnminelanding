@@ -1,0 +1,32 @@
+[build]
+command = "ng build"
+base = "."
+publish = "dist/"
+
+[build.environment]
+NODE_VERSION = "13.0.1"
+
+[context.branch-deploy]
+command = "ng build"
+base = "."
+publish = "dist/"
+
+[context.production]
+command = "ng build --prod --aot"
+base = "."
+publish = "dist/"
+
+[context.staging]
+command = "ng build"
+base = "."
+publish = "dist/"
+
+[context.dev]
+command = "ng build"
+base = "."
+publish = "dist/"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200

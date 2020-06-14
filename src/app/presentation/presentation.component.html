@@ -1,0 +1,320 @@
+<!--PRINCIPAL PAGE-->
+<div class="wrapper">
+  <div class="page-header section-dark section-main" style="background-image: url('./assets/img/minecraft_landscape.jpg')">
+    <particles [style]="myStyle" [params]="myParams"></particles>
+    <div class="content-center text-index">
+      <div class="container">
+        <h2 class="presentation-subtitle text-center">Welcome to UCN Craft</h2>
+        <h2 class="presentation-subtitle text-center">The new Minecraft Server</h2>
+        <h2 class="presentation-subtitle text-center">Discord: <a
+            href="https://discord.gg/4m9tajt"
+            target="_blank"
+        >
+          https://discord.gg/4m9tajt
+        </a></h2>
+        <h2 class="presentation-subtitle text-center">IP: ucncraft.cl</h2>
+        <h2 class="presentation-subtitle text-center">Server Status:
+          <span [style.color]="serverData ? 'green' : 'red'">
+            {{serverData ? 'Online' : 'Offline'}}
+          </span>
+        </h2>
+      </div>
+    </div>
+    <div class="moving-clouds" style="background-image: url('./assets/img/clouds.png'); "></div>
+    <div class="category category-absolute" style="top: 93vh;">
+      <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
+           style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+        <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+        <path id="mouse"
+              d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+              style="fill:none;stroke:#fff;stroke-width:20px;"/>
+      </svg>
+      <p style="font-weight: bold; color: white;">Desliza hacia abajo</p>
+    </div>
+  </div>
+</div>
+
+
+<!--ABOUT SERVER-->
+<div class="wrapper">
+  <div class="section section-container" style="background-image: url('./assets/img/card-bg.jpg')">
+    <div class="title" style="text-align: center; margin-top: 0">
+      <h3>¿Que es UCN Craft?</h3>
+    </div>
+    <div class="col-md-8 ml-auto mr-auto">
+      <div class="card card-plain card-blog">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="card-body">
+              <p class="card-description">
+                Somos un servidor de Minecraft con una comunidad de jugadores universitarios, dedicados a ofrecer la
+                mejor
+                experiencia con nuestro servidor. Únete a UCN Craft y adentrate en un entorno diferente,
+                esperamos siempre que la pases bien dentro de el servidor y tu estadía aquí sea la mejor. Somos NO
+                PREMIUM
+                y puedes ingresar mediante las versiones a 1.15.2
+              </p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="card-image">
+              <img class="img" src="assets/img/card.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="section section-overview section-detail-container"
+     style="background-image: url('./assets/img/detail-bg.jpg');">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 text-center">
+        <div class="space-top"></div>
+        <h2 class="title">¿Por qué UCN Craft?</h2>
+      </div>
+      <div class="container">
+        <div class="space-top"></div>
+        <div class="row">
+
+          <div class="col-sm-4">
+            <div class="card" data-background="color" data-color="green">
+              <div class="card-body text-center">
+                <div class="card-icon">
+                  <i class="nc-icon nc-controller-modern"></i>
+                </div>
+                <h4 class="card-title">Entretenimiento</h4>
+                <p class="card-description">Modalidades con increíbles características tales como, misiones,
+                  encantamientos especiales, cofres del tesoro, minijuegos y mucho más por descubrir, además
+                  de poder jugar con una variada comunidad universitaria y pasarla bien aventurándose en todo el
+                  servidor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card" data-background="color" data-color="blue">
+              <div class="card-body text-center">
+                <div class="card-icon">
+                  <i class="nc-icon nc-alert-circle-i"></i>
+                </div>
+                <h4 class="card-title">Eventos</h4>
+                <p class="card-description">Solemos hacer eventos y sorteos eventualmente en celebración a algún logro u
+                  ocasión especial, algunas de las cosas que puedes conseguir pueden ser, dinero, objetos e incluso
+                  rangos exclusivos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card" data-background="color" data-color="brown">
+              <div class="card-body text-center">
+                <div class="card-icon">
+                  <i class="nc-icon nc-settings-gear-65"></i>
+                </div>
+                <h4 class="card-title">Soporte amigable</h4>
+                <p class="card-description">Soporte activo y eficaz junto con un equipo administrativo sociable,
+                  divertido y comprometido a ayudar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--VIDEO-->
+<div class="wrapper">
+  <div class="section section-dark text-center landing-section">
+    <div class="col-md-8 ml-auto mr-auto">
+      <div class="card card-plain card-blog">
+        <div class="row">
+          <div class="col-md-5 ml-auto">
+            <div class="card card-plain">
+              <div class="card-body">
+                <h6 class="card-category">¡Mira uno de nuestros últimos videos!</h6>
+                <a href="javascript:void(0)">
+                  <h3 class="card-title">Torneo de combates</h3>
+                </a>
+                <p class="card-description">Cada sabado nos enfocamos en realizar torneos con un previo registro de los
+                  usuarios, estos usuarios ganan objetos y diversos titulos para que la diversión nunca se acabe.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5 mr-auto">
+            <iframe style="width: 100%; height: 300px" src="https://www.youtube.com/embed/arzSzKrbyMM" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--CAROUSEL-->
+<div class="wrapper">
+  <div class="section">
+    <div class="title" style="text-align: center">
+      <h2>Server</h2>
+    </div>
+    <div class="col-md-8 ml-auto mr-auto">
+      <div class="card card-raised page-carousel">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="assets/img/carousel/carousel1.png" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Spawn</h3>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="assets/img/carousel/carousel2.png" alt="Random second slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Castillo</h3>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="assets/img/carousel/carousel3.png" alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Coliseo</h3>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="assets/img/carousel/carousel4.png" alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Catedral</h3>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--TEAM-->
+<div class="wrapper">
+  <div class="section section-dark text-center landing-section">
+    <div class="container">
+      <h2 class="title">Equipo</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-profile card-plain">
+            <div class="card-avatar">
+              <img class="round-image" src="./assets/img/team/team1.png" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="author">
+                <h4 class="card-title">blacksinx</h4>
+                <h6 class="card-category text-muted">Owner</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-profile card-plain">
+            <div class="card-avatar">
+              <img class="round-image" src="./assets/img/team/team2.png" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="author">
+                <h4 class="card-title">Garlicboy</h4>
+                <h6 class="card-category text-muted">Admin</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-profile card-plain">
+            <div class="card-avatar">
+              <img class="round-image" src="./assets/img/team/team3.png" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="author">
+                <h4 class="card-title">xSopra</h4>
+                <h6 class="card-category text-muted">Admin</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-profile card-plain">
+            <div class="card-avatar">
+              <img class="round-image" src="./assets/img/team/team4.png" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="author">
+                <h4 class="card-title">El_Santa</h4>
+                <h6 class="card-category text-muted">Community Manager</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-profile card-plain">
+            <div class="card-avatar">
+              <img class="round-image" src="./assets/img/team/team5.png" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="author">
+                <h4 class="card-title">Deathless</h4>
+                <h6 class="card-category text-muted">Admin</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer footer-big">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 ml-auto mr-auto">
+        <div class="links">
+          <ul class="uppercase-links">
+            <li>
+              <a href="https://www.facebook.com/groups/784289015072897" target="_blank">
+                Facebook <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ucn_shitposting/?hl=es-la" target="_blank">
+                Instagram <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                Foro
+              </a>
+            </li>
+          </ul>
+          <hr/>
+
+          <div class="copyright">
+            © {{date | date: 'yyyy'}}, creado con el <i class="fa fa-heart heart"></i> by <a
+              href="https://github.com/Alpha018" target="_blank">Alpha018</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

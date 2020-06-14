@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg fixed-top nav-down" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <div class="navbar-header">
+                <a class="navbar-brand" [routerLink]="['/presentation']">UCN Craft</a>
+            </div>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link">Users Online: {{serverData?.players.online}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link button-hover" (click)="copyMessage('ucncraft.cl')">Copiar IP</a>
+                </li>
+                <div ngbDropdown class="nav-item dropdown">
+                    <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right dropdown-danger">
+                        <a ngbDropdownItem [routerLink]="['/presentation']"><i class="nc-icon nc-settings"></i>Home</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
