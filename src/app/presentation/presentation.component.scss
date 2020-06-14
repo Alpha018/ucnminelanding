@@ -1,6 +1,7 @@
 .section-main {
   h2, a {
     font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 }
 
@@ -79,11 +80,13 @@ body {
   background-repeat: round;
 
   h3 {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     margin-top: 0;
     color: white;
   }
 
   p {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-size: 20px;
     padding-top: 10px;
     color: white;
@@ -93,11 +96,7 @@ body {
 .section-detail-container {
   background-repeat: round;
 
-  h2 {
-    color: white;
-  }
-
-  p {
+  h2, p {
     color: white;
   }
 }
