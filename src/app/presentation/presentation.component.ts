@@ -69,9 +69,6 @@ export class PresentationComponent implements OnInit, OnDestroy {
     this.serverService.getServerData().toPromise().then((data: ServerResponse) => {
       this.serverData = data;
     });
-    this.serverService.getServerStatus().subscribe((data: ServerResponse) => {
-      this.serverData = data;
-    })
   }
 
   ngOnDestroy() {

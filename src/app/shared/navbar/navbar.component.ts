@@ -28,9 +28,6 @@ export class NavbarComponent implements OnInit {
         this.serverService.getServerData().toPromise().then((data: ServerResponse) => {
             this.serverData = data;
         });
-        this.serverService.getServerStatus().subscribe((data: ServerResponse) => {
-            this.serverData = data;
-        })
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;
