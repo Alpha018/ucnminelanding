@@ -100,3 +100,22 @@ body {
     color: white;
   }
 }
+
+.section-community {
+  h3 {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 13px;
+
+    @media (min-width: 769px) {
+      font-size: 1.825em;
+    }
+  }
+  p {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 12px;
+
+    @media (min-width: 769px) {
+      font-size: 15px;
+    }
+  }
+}
