@@ -1,6 +1,7 @@
 <!--PRINCIPAL PAGE-->
 <div class="wrapper">
-  <div class="page-header section-dark section-main" style="background-image: url('./assets/img/minecraft_landscape.jpg')">
+  <div class="page-header section-dark section-main"
+       style="background-image: url('./assets/img/minecraft_landscape.jpg')">
     <particles [style]="myStyle" [params]="myParams"></particles>
     <div class="content-center text-index">
       <div class="container">
@@ -22,7 +23,7 @@
     </div>
     <div class="moving-clouds" style="background-image: url('./assets/img/clouds.png'); "></div>
     <div class="category category-absolute" style="top: 93vh;">
-      <svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      <svg width="40px" height="100%" viewBox="0 0 247 390" xmlns="http://www.w3.org/2000/svg"
            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
         <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
         <path id="mouse"
@@ -37,7 +38,7 @@
 
 <!--ABOUT SERVER-->
 <div class="wrapper">
-  <div class="section section-container" style="background-image: url('./assets/img/card-bg.jpg')">
+  <div class="section section-container section-dark">
     <div class="title" style="text-align: center; margin-top: 0">
       <h3>¿Que es UCN Craft?</h3>
     </div>
@@ -58,7 +59,7 @@
           </div>
           <div class="col-md-5">
             <div class="card-image">
-              <img class="img" src="assets/img/card.png"/>
+              <img alt="card" class="img" src="assets/img/card.webp"/>
             </div>
           </div>
         </div>
@@ -69,7 +70,7 @@
 
 <!--SERVER DETAIL-->
 <div class="section section-overview section-detail-container"
-     style="background-image: url('./assets/img/detail-bg.jpg');">
+     style="background-image: url('./assets/img/card-bg.jpg')">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 offset-md-2 text-center">
@@ -81,7 +82,7 @@
         <div class="row">
 
           <div class="col-sm-4">
-            <div class="card" data-background="color" data-color="green">
+            <div class="card card-standard" data-background="color" data-color="green">
               <div class="card-body text-center">
                 <div class="card-icon">
                   <i class="nc-icon nc-controller-modern"></i>
@@ -96,7 +97,7 @@
           </div>
 
           <div class="col-sm-4">
-            <div class="card" data-background="color" data-color="blue">
+            <div class="card card-standard" data-background="color" data-color="blue">
               <div class="card-body text-center">
                 <div class="card-icon">
                   <i class="nc-icon nc-alert-circle-i"></i>
@@ -110,7 +111,7 @@
           </div>
 
           <div class="col-sm-4">
-            <div class="card" data-background="color" data-color="brown">
+            <div class="card card-standard" data-background="color" data-color="brown">
               <div class="card-body text-center">
                 <div class="card-icon">
                   <i class="nc-icon nc-settings-gear-65"></i>
@@ -148,7 +149,7 @@
           </div>
 
           <div class="col-md-5 mr-auto">
-            <iframe style="width: 100%; height: 300px" src="https://www.youtube.com/embed/arzSzKrbyMM" frameborder="0"
+            <iframe class="video" src="https://www.youtube.com/embed/arzSzKrbyMM"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
           </div>
@@ -169,7 +170,7 @@
         <ngb-carousel>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/img/carousel/carousel1.png" alt="Random first slide">
+              <img src="assets/img/carousel/carousel1.webp" alt="Random first slide">
             </div>
             <div class="carousel-caption">
               <h3>Spawn</h3>
@@ -177,7 +178,7 @@
           </ng-template>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/img/carousel/carousel2.png" alt="Random second slide">
+              <img src="assets/img/carousel/carousel2.webp" alt="Random second slide">
             </div>
             <div class="carousel-caption">
               <h3>Castillo</h3>
@@ -185,7 +186,7 @@
           </ng-template>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/img/carousel/carousel3.png" alt="Random third slide">
+              <img src="assets/img/carousel/carousel3.webp" alt="Random third slide">
             </div>
             <div class="carousel-caption">
               <h3>Coliseo</h3>
@@ -193,7 +194,7 @@
           </ng-template>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/img/carousel/carousel4.png" alt="Random third slide">
+              <img src="assets/img/carousel/carousel4.webp" alt="Random third slide">
             </div>
             <div class="carousel-caption">
               <h3>Catedral</h3>
@@ -217,7 +218,7 @@
         <ngb-carousel>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/cruz1.png" alt="Random first slide">
+              <img src="assets/communityWork/cruz1.webp" alt="Random first slide">
             </div>
             <div class="carousel-caption">
               <h3>La cuckruz de los Funetas milenarios</h3>
@@ -226,7 +227,7 @@
           </ng-template>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/cruz2.png" alt="Random first slide">
+              <img src="assets/communityWork/cruz2.webp" alt="Random first slide">
             </div>
             <div class="carousel-caption">
               <h3>La cuckruz de los Funetas milenarios</h3>
@@ -235,7 +236,7 @@
           </ng-template>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/temple1.png" alt="Random first slide">
+              <img src="assets/communityWork/temple1.webp" alt="Random first slide">
             </div>
             <div class="carousel-caption">
               <h3>Templo egipcio</h3>
@@ -244,7 +245,7 @@
           </ng-template>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/temple2.png" alt="Random first slide">
+              <img src="assets/communityWork/temple2.webp" alt="Random first slide">
             </div>
             <div class="carousel-caption">
               <h3>Templo egipcio</h3>
@@ -253,7 +254,7 @@
           </ng-template>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/dist1.png" alt="Random first slide">
+              <img src="assets/communityWork/dist1.webp" alt="Random first slide">
             </div>
             <div class="carousel-caption">
               <h3>Distortion World</h3>
@@ -262,7 +263,7 @@
           </ng-template>
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/dist2.png" alt="Random first slide">
+              <img src="assets/communityWork/dist2.webp" alt="Random first slide">
             </div>
             <div class="carousel-caption">
               <h3>Distortion World</h3>
@@ -284,7 +285,7 @@
         <div class="col-md-6">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team1.png" alt="...">
+              <img class="round-image" src="./assets/img/team/team1.webp" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -298,7 +299,7 @@
         <div class="col-md-6">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team2.png" alt="...">
+              <img class="round-image" src="./assets/img/team/team2.webp" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -312,7 +313,7 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team3.png" alt="...">
+              <img class="round-image" src="./assets/img/team/team3.webp" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -326,7 +327,7 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team4.png" alt="...">
+              <img class="round-image" src="./assets/img/team/team4.webp" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -340,7 +341,7 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team5.png" alt="...">
+              <img class="round-image" src="./assets/img/team/team5.webp" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
