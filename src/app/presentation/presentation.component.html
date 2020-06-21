@@ -1,7 +1,7 @@
 <!--PRINCIPAL PAGE-->
 <div class="wrapper">
   <div class="page-header section-dark section-main"
-       style="background-image: url('./assets/img/minecraft_landscape.jpg')">
+       style="background-image: url('https://images.ctfassets.net/kad98swp6atl/3n1evI7eUj0kDGiETPWxoL/7354670764d3702eb7a853f06c411797/minecraft_landscape.jpg?fm=webp')">
     <particles [style]="myStyle" [params]="myParams"></particles>
     <div class="content-center text-index">
       <div class="container">
@@ -59,7 +59,7 @@
           </div>
           <div class="col-md-5">
             <div class="card-image">
-              <img alt="card" class="img" src="assets/img/card.webp"/>
+              <img alt="card" class="img" src="https://images.ctfassets.net/kad98swp6atl/12UNuDwdqfwioGGlVkAw0K/b7a396b871fa2a9a924faada135e3894/card.webp?w=500&h=280&q=100"/>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="row">
 
           <div class="col-sm-4">
-            <div class="card card-standard" data-background="color" data-color="green">
+            <div class="card card-standard" data-background="color" data-color="purple">
               <div class="card-body text-center">
                 <div class="card-icon">
                   <i class="nc-icon nc-controller-modern"></i>
@@ -168,36 +168,12 @@
     <div class="col-md-8 ml-auto mr-auto">
       <div class="card card-raised page-carousel">
         <ngb-carousel>
-          <ng-template ngbSlide>
+          <ng-template *ngFor="let data of carouselImageServer" ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/img/carousel/carousel1.webp" alt="Random first slide">
+              <img [src]="data.fields.image.fields.file.url + '?h=449&w=1238&q=100'" [alt]="data.fields.image.fields.title">
             </div>
             <div class="carousel-caption">
-              <h3>Spawn</h3>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/img/carousel/carousel2.webp" alt="Random second slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Castillo</h3>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/img/carousel/carousel3.webp" alt="Random third slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Coliseo</h3>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/img/carousel/carousel4.webp" alt="Random third slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Catedral</h3>
+              <h3>{{data.fields.title}}</h3>
             </div>
           </ng-template>
         </ngb-carousel>
@@ -216,76 +192,13 @@
     <div class="col-md-8 ml-auto mr-auto section-community">
       <div class="card card-raised page-carousel">
         <ngb-carousel>
-          <ng-template ngbSlide>
+          <ng-template *ngFor="let data of carouselImageUsers" ngbSlide>
             <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/cruz1.webp" alt="Random first slide">
+              <img [src]="data.fields.image.fields.file.url + '?h=697&w=1239&q=100'" [alt]="data.fields.image.fields.title">
             </div>
             <div class="carousel-caption">
-              <h3>La cuckruz de los Funetas milenarios</h3>
-              <p>By: StarHyru, Aimee_bleu, reiXvaj</p>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/cruz2.webp" alt="Random first slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>La cuckruz de los Funetas milenarios</h3>
-              <p>By: StarHyru, Aimee_bleu, reiXvaj</p>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/temple1.webp" alt="Random first slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Templo egipcio</h3>
-              <p>By: Penetron, michipelona</p>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/temple2.webp" alt="Random first slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Templo egipcio</h3>
-              <p>By: Penetron, michipelona</p>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/dist1.webp" alt="Random first slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Distortion World</h3>
-              <p>By: Saladix, Ghostielim, SR_F05T3R, mxxmarco, truespace</p>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/dist2.webp" alt="Random first slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Distortion World</h3>
-              <p>By: Saladix, Ghostielim, SR_F05T3R, mxxmarco, truespace</p>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/shiganshina1.webp" alt="Random first slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Shiganshina</h3>
-              <p>By: Clauriou</p>
-            </div>
-          </ng-template>
-          <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-              <img src="assets/communityWork/shiganshina2.webp" alt="Random first slide">
-            </div>
-            <div class="carousel-caption">
-              <h3>Shiganshina</h3>
-              <p>By: Clauriou</p>
+              <h3>{{data.fields.title}}</h3>
+              <p>{{data.fields.creators}}</p>
             </div>
           </ng-template>
         </ngb-carousel>
@@ -303,7 +216,7 @@
         <div class="col-md-6">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team1.webp" alt="...">
+              <img class="round-image" src="https://images.ctfassets.net/kad98swp6atl/5zCI90ZRn2OCuPf6I3qzG5/0109aca44e0b2af353fd5632fff30dce/team1.webp?w=120&h=120&q=100" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -317,7 +230,7 @@
         <div class="col-md-6">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team2.webp" alt="...">
+              <img class="round-image" src="https://images.ctfassets.net/kad98swp6atl/5srMjQvxc0HeHfc9rV0EH0/287812eae286b0fa56a8b867c3f7c75f/team2.webp?w=120&h=120&q=100" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -331,7 +244,7 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team3.webp" alt="...">
+              <img class="round-image" src="https://images.ctfassets.net/kad98swp6atl/s9cU6oeqtms3g9ed4CREM/5fe095be6c5f7521e2e619e6223a35bc/team3.webp?w=120&h=120&q=100" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -345,7 +258,7 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team4.webp" alt="...">
+              <img class="round-image" src="https://images.ctfassets.net/kad98swp6atl/66iQmKVdJ6YxGvwkGUqjYv/e3b0dc2edfdfba8f851483963e62a899/team4.webp?w=120&h=120&q=100" alt="...">
             </div>
             <div class="card-body">
               <div class="author">
@@ -359,7 +272,7 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-avatar">
-              <img class="round-image" src="./assets/img/team/team5.webp" alt="...">
+              <img class="round-image" src="https://images.ctfassets.net/kad98swp6atl/1Z64Mbk4tDSWJK6GmEmOwZ/cb1783b2eef67a8f3d4d808c0f18cab3/team5.webp?w=120&h=120&q=100" alt="...">
             </div>
             <div class="card-body">
               <div class="author">

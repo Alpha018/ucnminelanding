@@ -1,7 +1,7 @@
 {
   "name": "UCN Craft",
   "short_name": "UCN Craft",
-  "theme_color": "#1976d2",
+  "theme_color": "#804000",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

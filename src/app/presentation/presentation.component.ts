@@ -1,6 +1,9 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {ServerService} from '../service/server.service';
 import {ServerResponse} from '../types/request';
+import {ContentfulService} from "../service/contentful/contentful.service";
+import {CarouselServer, CarouselUser} from "../types/contentfulResponse";
+import {Entry} from "contentful";
 
 @Component({
   selector: 'app-presentation',
@@ -30,8 +33,12 @@ export class PresentationComponent implements OnInit, OnDestroy {
     position: 'absolute'
   };
 
+  carouselImageUsers: Entry<CarouselUser>[];
+  carouselImageServer: Entry<CarouselServer>[];
+
   constructor(
-    private serverService: ServerService
+    private serverService: ServerService,
+    private contentfulService: ContentfulService
   ) {
   }
 
@@ -50,7 +57,9 @@ export class PresentationComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.carouselImageUsers = await this.contentfulService.getUserCarousel()
+    this.carouselImageServer = await this.contentfulService.getServerCarousel();
     const body = document.getElementsByTagName('body')[0];
     body.classList.add('presentation-page');
     body.classList.add('loading');
