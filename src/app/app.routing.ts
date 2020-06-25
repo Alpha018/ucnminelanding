@@ -4,8 +4,10 @@ import {BrowserModule} from '@angular/platform-browser';
 import {Routes, RouterModule} from '@angular/router';
 
 import {PresentationComponent} from './presentation/presentation.component';
+import {RulesComponent} from "./rules/rules.component";
 
 const routes: Routes = [
+  {path: 'rules', component: RulesComponent},
   {path: '', component: PresentationComponent},
   {path: '**', redirectTo: ''}
 ];

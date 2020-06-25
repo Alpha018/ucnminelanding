@@ -12,11 +12,13 @@ import {PresentationModule} from './presentation/presentation.module';
 import {HttpClientModule} from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    RulesComponent
   ],
   imports: [
     BrowserAnimationsModule,

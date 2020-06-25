@@ -1,3 +1,8 @@
+export interface Rules {
+  version: string;
+  rules: any;
+}
+
 export interface CarouselServer {
   title: string;
   image: Image;
