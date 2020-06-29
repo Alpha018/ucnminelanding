@@ -14,6 +14,16 @@ export interface CarouselUser {
   image: Image;
 }
 
+export interface Blog {
+  icon: string
+  title: string;
+  description: any;
+  photo: Image;
+  publishDate: string;
+  tag: string;
+  author: string;
+}
+
 export interface Image {
   fields: Fields2;
 }

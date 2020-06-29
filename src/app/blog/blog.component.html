@@ -1,0 +1,66 @@
+<section>
+  <div class="page-header page-header-small"
+       style="background-image: url('https://images.ctfassets.net/kad98swp6atl/3n1evI7eUj0kDGiETPWxoL/7354670764d3702eb7a853f06c411797/minecraft_landscape.jpg?fm=webp')">
+    <div class="content-center">
+      <div class="container">
+        <h1>Noticias</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 m1-auto mr-auto">
+        <h2 class="title">Ultimas Noticias</h2>
+        <br>
+        <ng-container *ngFor="let blog of blogs; let odd = odd">
+          <div class="card card-plain card-blog margin-card" *ngIf="!odd">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="card-image">
+                  <img [alt]="blog.fields.photo.fields.title" class="img" [src]="blog.fields.photo.fields.file.url">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h6 [class]="'card-category ' + getClassTag(blog.fields.tag)">
+                    <i *ngIf="blog.fields.icon" [class]="'fa ' + blog.fields.icon"></i>
+                    {{blog.fields.tag}}
+                  </h6>
+                  <h3 class="card-title">{{blog.fields.title}}</h3>
+                  <p class="card-description">
+                    {{blog.fields.description}}
+                  </p>
+                  <p class="author">Por: <b>{{blog.fields.author}}</b>, {{blog.fields.publishDate | timeAgo}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-plain card-blog margin-card" *ngIf="odd">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h6 [class]="'card-category ' + getClassTag(blog.fields.tag)">
+                    <i *ngIf="blog.fields.icon" [class]="'fa ' + blog.fields.icon"></i>
+                    {{blog.fields.tag}}
+                  </h6>
+                  <h3 class="card-title">{{blog.fields.title}}</h3>
+                  <p class="card-description">
+                    {{blog.fields.description}}
+                  </p>
+                  <p class="author">Por: <b>{{blog.fields.author}}</b>, {{blog.fields.publishDate | timeAgo}}</p>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="card-image">
+                  <img [alt]="blog.fields.photo.fields.title" class="img" [src]="blog.fields.photo.fields.file.url">
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>

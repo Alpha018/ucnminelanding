@@ -13,12 +13,16 @@ import {HttpClientModule} from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RulesComponent } from './rules/rules.component';
+import { BlogComponent } from './blog/blog.component';
+import {TimeAgoPipe} from "./shared/pipes/time-ago.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    RulesComponent
+    RulesComponent,
+    BlogComponent,
+    TimeAgoPipe
   ],
   imports: [
     BrowserAnimationsModule,
