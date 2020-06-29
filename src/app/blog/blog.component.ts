@@ -18,6 +18,9 @@ export class BlogComponent implements OnInit {
   }
 
   async ngOnInit() {
+    const navbar = document.getElementsByTagName('nav')[0];
+    navbar.classList.add('navbar-transparent');
+
     this.blogs = await this.contentfulService.getBlogPost();
   }
 
