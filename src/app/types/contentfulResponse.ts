@@ -1,3 +1,8 @@
+export interface Rules {
+  version: string;
+  rules: any;
+}
+
 export interface CarouselServer {
   title: string;
   image: Image;
@@ -7,6 +12,16 @@ export interface CarouselUser {
   title: string;
   creators: string;
   image: Image;
+}
+
+export interface Blog {
+  icon: string
+  title: string;
+  description: any;
+  photo: Image;
+  publishDate: string;
+  tag: string;
+  author: string;
 }
 
 export interface Image {

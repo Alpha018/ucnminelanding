@@ -58,14 +58,14 @@ export class PresentationComponent implements OnInit, OnDestroy {
   }
 
   async ngOnInit() {
-    this.carouselImageUsers = await this.contentfulService.getUserCarousel()
-    this.carouselImageServer = await this.contentfulService.getServerCarousel();
+    const navbar = document.getElementsByTagName('nav')[0];
+    navbar.classList.add('navbar-transparent');
     const body = document.getElementsByTagName('body')[0];
     body.classList.add('presentation-page');
     body.classList.add('loading');
-    const navbar = document.getElementsByTagName('nav')[0];
-    navbar.classList.add('navbar-transparent');
 
+    this.carouselImageUsers = await this.contentfulService.getUserCarousel()
+    this.carouselImageServer = await this.contentfulService.getServerCarousel();
     this.serverService.getServerData().toPromise().then((data: ServerResponse) => {
       this.serverData = data;
     });
