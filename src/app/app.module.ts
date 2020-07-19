@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 import { RulesComponent } from './rules/rules.component';
 import { BlogComponent } from './blog/blog.component';
 import {TimeAgoPipe} from "./shared/pipes/time-ago.pipe";
+import { AchievementsComponent } from './achievements/achievements.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {TimeAgoPipe} from "./shared/pipes/time-ago.pipe";
     NavbarComponent,
     RulesComponent,
     BlogComponent,
-    TimeAgoPipe
+    TimeAgoPipe,
+    AchievementsComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -14,6 +14,12 @@ export interface CarouselUser {
   image: Image;
 }
 
+export interface UserAchievements {
+  userName: string;
+  achievements: string;
+  userImage: Image;
+}
+
 export interface Blog {
   icon: string
   title: string;
