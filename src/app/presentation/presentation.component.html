@@ -19,6 +19,10 @@
             {{serverData ? 'Online' : 'Offline'}}
           </span>
         </h2>
+        <button [routerLink]="'/map'" class="btn btn-success btn-round mr-1 button-map" type="button">
+          <i class="fa nc-icon nc-pin-3"></i>
+          Mapa Dinámico
+        </button>
       </div>
     </div>
     <div class="moving-clouds" style="background-image: url('./assets/img/clouds.png'); "></div>
@@ -53,7 +57,7 @@
                 experiencia con nuestro servidor. Únete a UCN Craft y adentrate en un entorno diferente,
                 esperamos siempre que la pases bien dentro de el servidor y tu estadía aquí sea la mejor. Somos NO
                 PREMIUM
-                y puedes ingresar mediante las versiones a 1.16.1
+                y puedes ingresar mediante la version <b>{{serverData?.version || '1.16.1'}}</b>
               </p>
             </div>
           </div>

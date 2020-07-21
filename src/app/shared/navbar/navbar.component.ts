@@ -1,6 +1,5 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
-import {Location} from '@angular/common';
-import {ServerResponse} from '../../types/request';
+import {MCData} from '../../types/request';
 import {ServerService} from '../../service/server.service';
 
 @Component({
@@ -11,10 +10,9 @@ import {ServerService} from '../../service/server.service';
 export class NavbarComponent implements OnInit {
   private toggleButton: any;
   private sidebarVisible: boolean;
-  serverData: ServerResponse;
+  serverData: MCData;
 
   constructor(
-    public location: Location,
     private element: ElementRef,
     private serverService: ServerService
   ) {
@@ -25,7 +23,7 @@ export class NavbarComponent implements OnInit {
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
 
-    this.serverService.getServerData().toPromise().then((data: ServerResponse) => {
+    this.serverService.getServerDataMC().toPromise().then((data: MCData) => {
       this.serverData = data;
     });
   }
@@ -49,8 +47,6 @@ export class NavbarComponent implements OnInit {
   };
 
   sidebarToggle() {
-    // const toggleButton = this.toggleButton;
-    // const body = document.getElementsByTagName('body')[0];
     if (this.sidebarVisible === false) {
       this.sidebarOpen();
     } else {
