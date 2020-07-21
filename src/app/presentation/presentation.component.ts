@@ -1,6 +1,6 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {ServerService} from '../service/server.service';
-import {ServerResponse} from '../types/request';
+import {MCData} from '../types/request';
 import {ContentfulService} from "../service/contentful/contentful.service";
 import {CarouselServer, CarouselUser} from "../types/contentfulResponse";
 import {Entry} from "contentful";
@@ -12,7 +12,7 @@ import {Entry} from "contentful";
 })
 
 export class PresentationComponent implements OnInit, OnDestroy {
-  serverData: ServerResponse;
+  serverData: MCData;
   date: Date = new Date();
 
   myParams = {
@@ -66,7 +66,7 @@ export class PresentationComponent implements OnInit, OnDestroy {
 
     this.carouselImageUsers = await this.contentfulService.getUserCarousel()
     this.carouselImageServer = await this.contentfulService.getServerCarousel();
-    this.serverService.getServerData().toPromise().then((data: ServerResponse) => {
+    this.serverService.getServerDataMC().toPromise().then((data: MCData) => {
       this.serverData = data;
     });
   }

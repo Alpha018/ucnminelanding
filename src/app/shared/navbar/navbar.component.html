@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link">Users Online: {{serverData?.players.online}}</a>
+          <a class="nav-link">Users Online: {{serverData?.players || 0}}</a>
         </li>
         <li class="nav-item">
           <a [routerLink]="['/rules']" class="nav-link button-hover">Reglas</a>
