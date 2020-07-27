@@ -8,12 +8,14 @@ import {RulesComponent} from "./rules/rules.component";
 import {BlogComponent} from "./blog/blog.component";
 import {AchievementsComponent} from "./achievements/achievements.component";
 import {MapComponent} from "./map/map.component";
+import {ShopComponent} from "./shop/shop.component";
 
 const routes: Routes = [
   {path: 'rules', component: RulesComponent},
   {path: 'news', component: BlogComponent},
   {path: 'achievements', component: AchievementsComponent},
   {path: 'map', component: MapComponent},
+  {path: 'shop', component: ShopComponent},
   {path: '', component: PresentationComponent},
   {path: '**', redirectTo: ''}
 ];

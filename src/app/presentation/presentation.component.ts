@@ -13,7 +13,6 @@ import {Entry} from "contentful";
 
 export class PresentationComponent implements OnInit, OnDestroy {
   serverData: MCData;
-  date: Date = new Date();
 
   myParams = {
     particles: {
