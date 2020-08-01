@@ -17,6 +17,8 @@ import { BlogComponent } from './blog/blog.component';
 import {TimeAgoPipe} from "./shared/pipes/time-ago.pipe";
 import { AchievementsComponent } from './achievements/achievements.component';
 import { MapComponent } from './map/map.component';
+import { ShopComponent } from './shop/shop.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { MapComponent } from './map/map.component';
     BlogComponent,
     TimeAgoPipe,
     AchievementsComponent,
-    MapComponent
+    MapComponent,
+    ShopComponent,
+    FooterComponent
   ],
   imports: [
     BrowserAnimationsModule,

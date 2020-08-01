@@ -1,6 +1,6 @@
 {
   "name": "paper-kit-2-pro-angular",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -48,7 +48,7 @@
     "zone.js": "0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.900.4",
+    "@angular-devkit/build-angular": "^0.1000.5",
     "@angular/cli": "9.0.4",
     "@angular/compiler-cli": "9.0.4",
     "@angular/language-service": "9.0.4",
