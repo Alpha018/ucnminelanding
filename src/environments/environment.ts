@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   mcKey: 'BB5ZLRc5NJxGVC9A6ViKJNbAxZcmiMJEYC',
+  recaptchaKey: '6LdQtrwZAAAAANBc3OVR_VuYMMnZhKbQVr8avok_',
   contentful: {
     space: 'kad98swp6atl',
     accessToken: 'CU0IqzruIntrP2UtVLHwQSCLXtK2_DWQLMbbgDouO4M',

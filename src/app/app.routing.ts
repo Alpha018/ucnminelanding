@@ -9,6 +9,10 @@ import {BlogComponent} from "./blog/blog.component";
 import {AchievementsComponent} from "./achievements/achievements.component";
 import {MapComponent} from "./map/map.component";
 import {ShopComponent} from "./shop/shop.component";
+import {ShopDetailComponent} from "./shop-detail/shop-detail.component";
+import {FinalStepTransactionComponent} from "./final-step-transaction/final-step-transaction.component";
+import {SuccessTransactionComponent} from "./success-transaction/success-transaction.component";
+import {FailTransactionComponent} from "./fail-transaction/fail-transaction.component";
 
 const routes: Routes = [
   {path: 'rules', component: RulesComponent},
@@ -16,6 +20,10 @@ const routes: Routes = [
   {path: 'achievements', component: AchievementsComponent},
   {path: 'map', component: MapComponent},
   {path: 'shop', component: ShopComponent},
+  {path: 'shop-detail', component: ShopDetailComponent},
+  {path: 'shop-final', component: FinalStepTransactionComponent},
+  {path: 'success', component: SuccessTransactionComponent},
+  {path: 'fail', component: FailTransactionComponent},
   {path: '', component: PresentationComponent},
   {path: '**', redirectTo: ''}
 ];
