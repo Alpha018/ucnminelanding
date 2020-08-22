@@ -10,6 +10,8 @@ export class SuccessTransactionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const navbar = document.getElementsByTagName('nav')[0];
+    navbar.classList.add('navbar-transparent');
   }
 
 }

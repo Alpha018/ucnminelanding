@@ -1,0 +1,38 @@
+<div class="page-header page-header-small"
+     style="background-image: url('https://images.ctfassets.net/kad98swp6atl/3n1evI7eUj0kDGiETPWxoL/7354670764d3702eb7a853f06c411797/minecraft_landscape.jpg?fm=jpg')">
+  <div class="content-center">
+    <div class="container">
+      <h1>Tienda</h1>
+      <h3>{{ itemShop?.fields.title }}</h3>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="img-center" *ngIf="loading">
+      <div class="uil-reload-css reload-background">
+        <div></div>
+      </div>
+    </div>
+    <div class="col-md-12" *ngIf="!loading">
+      <div class="img-center">
+        <img
+            [alt]="itemShop.fields.image.fields.title"
+            [src]="itemShop.fields.image.fields.file.url"
+            class="img img-rounded"
+        />
+      </div>
+      <h2 class="img-center font-weight-bold">{{ itemShop.fields.amount | currency:'CLP':'symbol-narrow' }}</h2>
+      <div class="col-md-3 center">
+        <button
+            class="btn btn-center btn-danger btn-block btn-lg button-style"
+            (click)="nextStep()"
+        >
+          Comprar
+        </button>
+      </div>
+      <div class="text-style" [innerHTML]="richTextHtml"></div>
+    </div>
+  </div>
+</div>

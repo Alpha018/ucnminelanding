@@ -20,8 +20,9 @@ export class AchievementsComponent implements OnInit {
     const navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.add('navbar-transparent');
 
-    this.achievements = await this.contentfulService.getUserAchievements();
-    console.log(this.achievements)
+    this.achievements = (await this.contentfulService.getUserAchievements()).sort((a, b) => {
+      return new Date(a.fields.date).getTime() - new Date(b.fields.date).getTime();
+    });
   }
 
 
