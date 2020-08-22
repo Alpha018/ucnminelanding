@@ -19,7 +19,7 @@
             {{serverData ? 'Online' : 'Offline'}}
           </span>
         </h2>
-        <button [routerLink]="'/map'" class="btn btn-success btn-round mr-1 button-map" type="button">
+        <button (click)="goDynMap()" class="btn btn-success btn-round mr-1 button-map" type="button">
           <i class="fa nc-icon nc-pin-3"></i>
           Mapa Dinámico
         </button>
@@ -231,12 +231,10 @@
          src="https://images.ctfassets.net/kad98swp6atl/4RU1OCRuSuP7si7RhVUsw5/2893d63b68bd1ac2d5253fbe005297c6/shopdrown.png?w=400"/>
     <br/>
     <div>
-      <a href="http://ucn-craft-shop.tebex.io/" target="_blank">
-        <button class="btn btn-warning mr-1 button-map">
-          <i class="fa nc-icon nc-shop"></i>
-          Tienda
-        </button>
-      </a>
+      <button (click)="goShop()" class="btn btn-warning mr-1 button-map">
+        <i class="fa nc-icon nc-shop"></i>
+        Tienda
+      </button>
     </div>
   </div>
 </div>

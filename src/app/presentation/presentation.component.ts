@@ -4,6 +4,8 @@ import {MCData} from '../types/request';
 import {ContentfulService} from "../service/contentful/contentful.service";
 import {CarouselServer, CarouselUser} from "../types/contentfulResponse";
 import {Entry} from "contentful";
+import {GoogleAnalyticsService} from "mugan86-ng-google-analytics";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-presentation',
@@ -37,7 +39,9 @@ export class PresentationComponent implements OnInit, OnDestroy {
 
   constructor(
     private serverService: ServerService,
-    private contentfulService: ContentfulService
+    private contentfulService: ContentfulService,
+    private router: Router,
+    private readonly googleAnalyticsService: GoogleAnalyticsService
   ) {
   }
 
@@ -76,5 +80,15 @@ export class PresentationComponent implements OnInit, OnDestroy {
     body.classList.remove('loading');
     const navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.remove('navbar-transparent');
+  }
+
+  goShop() {
+    this.googleAnalyticsService.eventEmitter('shop', 'GO_SHOP_SECTION');
+    this.router.navigate(['/shop']);
+  }
+
+  goDynMap() {
+    this.googleAnalyticsService.eventEmitter('shop', 'GO_MAP');
+    this.router.navigate(['/map']);
   }
 }

@@ -27,6 +27,7 @@ import { FinalStepTransactionComponent } from './final-step-transaction/final-st
 import { SuccessTransactionComponent } from './success-transaction/success-transaction.component';
 import { FailTransactionComponent } from './fail-transaction/fail-transaction.component';
 import {RECAPTCHA_V3_SITE_KEY, RecaptchaFormsModule, RecaptchaModule, RecaptchaV3Module} from 'ng-recaptcha';
+import { Mugan86GoogleAnalyticsModule } from 'mugan86-ng-google-analytics';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,10 @@ import {RECAPTCHA_V3_SITE_KEY, RecaptchaFormsModule, RecaptchaModule, RecaptchaV
     FailTransactionComponent
   ],
   imports: [
+    Mugan86GoogleAnalyticsModule.forRoot({
+      analyticsId: environment.analyticsId,
+      showLog: false
+    }),
     StoreModule.forRoot({
       transaction: reducer
     }),

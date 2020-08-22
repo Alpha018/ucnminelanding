@@ -1,6 +1,8 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
 import {MCData} from '../../types/request';
 import {ServerService} from '../../service/server.service';
+import {Router} from "@angular/router";
+import {GoogleAnalyticsService} from "mugan86-ng-google-analytics";
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +16,9 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private element: ElementRef,
-    private serverService: ServerService
+    private serverService: ServerService,
+    private router: Router,
+    private readonly googleAnalyticsService: GoogleAnalyticsService
   ) {
     this.sidebarVisible = false;
   }
@@ -54,17 +58,28 @@ export class NavbarComponent implements OnInit {
     }
   };
 
-  copyMessage(val: string) {
-    const selBox = document.createElement('textarea');
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
-    selBox.value = val;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
+  goShop() {
+    this.googleAnalyticsService.eventEmitter('shop', 'GO_SHOP_NAVBAR');
+    this.router.navigate(['/shop']);
+  }
+
+  goAchievements() {
+    this.googleAnalyticsService.eventEmitter('achievements', 'GO_ACHIEVEMENTS_NAVBAR');
+    this.router.navigate(['/achievements']);
+  }
+
+  goNews() {
+    this.googleAnalyticsService.eventEmitter('news', 'GO_NEWS_NAVBAR');
+    this.router.navigate(['/news']);
+  }
+
+  goRules() {
+    this.googleAnalyticsService.eventEmitter('rules', 'GO_RULES_NAVBAR');
+    this.router.navigate(['/rules']);
+  }
+
+  goHome() {
+    this.googleAnalyticsService.eventEmitter('general', 'go_home_navbar');
+    this.router.navigate(['/']);
   }
 }
