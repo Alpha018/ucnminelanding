@@ -1,0 +1,94 @@
+<div class="page-header page-header-small"
+     style="background-image: url('https://images.ctfassets.net/kad98swp6atl/3n1evI7eUj0kDGiETPWxoL/7354670764d3702eb7a853f06c411797/minecraft_landscape.jpg?fm=jpg')">
+  <div class="content-center">
+    <div class="container">
+      <h1>Tienda</h1>
+      <h3>{{ (observable$ | async).plan }}</h3>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="align-center" *ngIf="loading">
+      <div class="uil-reload-css reload-background">
+        <div></div>
+      </div>
+    </div>
+    <div class="col-md-8 offset-md-2" *ngIf="!loading">
+      <form
+          [formGroup]="transactionService.schema"
+          (ngSubmit)="submit()"
+      >
+        <h1 class="align-center">Pago</h1>
+        <div
+            class="style-radio-container form-group"
+            [class.has-danger]="transactionService.schema.get('userName').hasError('required') &&
+                                transactionService.schema.get('userName').touched"
+        >
+          <label>Ingresa tu nombre de usuario <b>tal cual se encuentra en el servidor</b></label>
+          <input
+              class="form-control"
+              placeholder="Nombre de Usuario"
+              formControlName="userName"
+              name="userName"
+              (keydown)="validatePattern($event)"
+              [value]="transactionService.schema.get('userName').value"
+          />
+          <div *ngIf="transactionService.schema.get('userName').hasError('required') &&
+                                transactionService.schema.get('userName').touched"
+               class="form-control-feedback padding-0">El nombre de usuario es requerido
+          </div>
+        </div>
+
+        <p class="remember-text">Recuerda estar conectado al momento del pago y no tener objetos en tu inventario.</p>
+
+        <div class="style-radio-container">
+          <p>Medio de pago</p>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input
+                  checked
+                  class="form-check-input"
+                  type="checkbox"
+                  formControlName="payMethod"
+                  name="payMethod"
+                  disabled
+              >
+              <span class="form-check-sign"></span>
+              <img
+                  height="100"
+                  width="200"
+                  src="https://images.ctfassets.net/kad98swp6atl/77P7HYp84SYZGpLq8aI4IZ/90cc13766cfc2c7d07403172b4bcb15c/webpay.jpg?w=200&h=100"
+                  alt="webpay-logo"/>
+
+            </label>
+          </div>
+        </div>
+        <div class="button-style">
+          <button
+              type="submit"
+              class="btn btn-center btn-danger btn-block btn-lg button-style"
+              [disabled]="transactionService.schema.invalid || loadingRequest"
+          >
+            <div class="sk-cube-grid" *ngIf="loadingRequest">
+              <div class="sk-cube sk-cube1"></div>
+              <div class="sk-cube sk-cube2"></div>
+              <div class="sk-cube sk-cube3"></div>
+              <div class="sk-cube sk-cube4"></div>
+              <div class="sk-cube sk-cube5"></div>
+              <div class="sk-cube sk-cube6"></div>
+              <div class="sk-cube sk-cube7"></div>
+              <div class="sk-cube sk-cube8"></div>
+              <div class="sk-cube sk-cube9"></div>
+            </div>
+
+            <div *ngIf="!loadingRequest">
+              Realizar Pago
+            </div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

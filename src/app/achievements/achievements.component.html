@@ -16,24 +16,49 @@
         <h2>Torre Parkour</h2>
         <p>Ganadores del desafío</p>
       </div>
-          <div class="row">
-            <ng-container *ngFor="let data of achievements">
-              <div class="col-md-4" *ngIf="data.fields.achievements === 'parkour'">
-                <div class="card card-profile card-plain">
-                  <div class="card-avatar">
-                    <img class="round-image"
-                         [src]="data.fields.userImage.fields.file.url + '?fm=jpg&w=120&h=120&q=100'"
-                         [alt]="data.fields.userImage.fields.title">
-                  </div>
-                  <div class="card-body">
-                    <div class="author">
-                      <h4 class="card-title">{{data.fields.userName}}</h4>
-                    </div>
-                  </div>
+      <div class="row">
+        <ng-container *ngFor="let data of achievements">
+          <div class="col-md-4" *ngIf="data.fields.achievements === 'parkour'">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <img class="round-image"
+                     [src]="data.fields.userImage.fields.file.url + '?fm=jpg&w=120&h=120&q=100'"
+                     [alt]="data.fields.userImage.fields.title">
+              </div>
+              <div class="card-body">
+                <div class="author">
+                  <h4 class="card-title">{{data.fields.userName}}</h4>
+                  <p class="card-title">{{data.fields.date | date: 'dd-MM-yyyy hh:mm'}}</p>
                 </div>
               </div>
-            </ng-container>
+            </div>
           </div>
+        </ng-container>
+      </div>
+
+      <div class="title" style="text-align: center">
+        <h2>Laberinto</h2>
+        <p>Ganadores del desafío</p>
+      </div>
+      <div class="row">
+        <ng-container *ngFor="let data of achievements">
+          <div class="col-md-4" *ngIf="data.fields.achievements === 'laberinto'">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <img class="round-image"
+                     [src]="data.fields.userImage.fields.file.url + '?fm=jpg&w=120&h=120&q=100'"
+                     [alt]="data.fields.userImage.fields.title">
+              </div>
+              <div class="card-body">
+                <div class="author">
+                  <h4 class="card-title">{{data.fields.userName}}</h4>
+                  <p class="card-title">{{data.fields.date | date: 'dd-MM-yyyy hh:mm'}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
 
     </div>
   </div>

@@ -3,6 +3,14 @@ export interface Rules {
   rules: any;
 }
 
+export interface ShopItem {
+  id: string;
+  title: string;
+  description: any;
+  image: Image;
+  amount: number;
+}
+
 export interface CarouselServer {
   title: string;
   image: Image;
@@ -18,6 +26,7 @@ export interface UserAchievements {
   userName: string;
   achievements: string;
   userImage: Image;
+  date: Date;
 }
 
 export interface Blog {

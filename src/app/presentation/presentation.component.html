@@ -19,7 +19,7 @@
             {{serverData ? 'Online' : 'Offline'}}
           </span>
         </h2>
-        <button [routerLink]="'/map'" class="btn btn-success btn-round mr-1 button-map" type="button">
+        <button (click)="goDynMap()" class="btn btn-success btn-round mr-1 button-map" type="button">
           <i class="fa nc-icon nc-pin-3"></i>
           Mapa Dinámico
         </button>
@@ -64,7 +64,7 @@
           <div class="col-md-5">
             <div class="card-image">
               <img alt="card" class="img"
-                   src="https://images.ctfassets.net/kad98swp6atl/12UNuDwdqfwioGGlVkAw0K/b7a396b871fa2a9a924faada135e3894/card.webp?w=500&h=280&q=100&fm=jpg"/>
+                   src="https://images.ctfassets.net/kad98swp6atl/7d5rs4EmJlEjq2ggxaPssm/8b9c9f13d5dd35987783fd658ae5a00c/2020-06-26_23.36.47.png?w=500&h=280&q=100&fm=jpg"/>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@
 
 <!--SERVER DETAIL-->
 <div class="section section-overview section-detail-container"
-     style="background-image: url('./assets/img/card-bg.jpg')">
+     style="background-image: url('https://images.ctfassets.net/kad98swp6atl/6Kn6McD3PEFTFUUWNsLLgj/601df7820070e5380d7044d0efdfc363/2020-06-20_23.11.54.png?fm=jpg')">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 offset-md-2 text-center">
@@ -231,12 +231,10 @@
          src="https://images.ctfassets.net/kad98swp6atl/4RU1OCRuSuP7si7RhVUsw5/2893d63b68bd1ac2d5253fbe005297c6/shopdrown.png?w=400"/>
     <br/>
     <div>
-      <a href="http://ucn-craft-shop.tebex.io/" target="_blank">
-        <button class="btn btn-warning mr-1 button-map">
-          <i class="fa nc-icon nc-shop"></i>
-          Tienda
-        </button>
-      </a>
+      <button (click)="goShop()" class="btn btn-warning mr-1 button-map">
+        <i class="fa nc-icon nc-shop"></i>
+        Tienda
+      </button>
     </div>
   </div>
 </div>

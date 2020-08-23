@@ -18,16 +18,16 @@
           <a class="nav-link">Users Online: {{serverData?.players || 0}}</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/shop']" class="nav-link button-hover">Tienda</a>
+          <a (click)="goShop()" class="nav-link button-hover">Tienda</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/rules']" class="nav-link button-hover">Reglas</a>
+          <a (click)="goRules()" class="nav-link button-hover">Reglas</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/news']" class="nav-link button-hover">Noticias</a>
+          <a (click)="goNews()" class="nav-link button-hover">Noticias</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/achievements']" class="nav-link button-hover">Logros</a>
+          <a (click)="goAchievements()" class="nav-link button-hover">Logros</a>
         </li>
         <div ngbDropdown class="nav-item dropdown">
           <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right dropdown-danger">
