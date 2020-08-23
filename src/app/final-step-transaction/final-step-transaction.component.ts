@@ -49,11 +49,6 @@ export class FinalStepTransactionComponent implements OnInit {
 
   async submit() {
     this.loadingRequest = true;
-    console.log('Visa')
-    console.log('4051885600446623', '123')
-    console.log('Debito')
-    console.log('4051884239937763', '123')
-    console.log('rut:111111111', 'pass:123')
     const {userName, payMethod} = this.transactionService.schema.value;
     const captchaKey = await this.recaptchaV3Service.execute('importantAction').toPromise();
 
