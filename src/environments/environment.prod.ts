@@ -8,5 +8,8 @@ export const environment = {
     space: 'kad98swp6atl',
     accessToken: 'j9SNSeggLkT_dAWVrS4zyx0Nkt4CLeWL5uqR4E0dRTU',
     host: ''
+  },
+  mcServerBackend: {
+    serverId: '5f4b1ccaafcf49a9c840cc43'
   }
 };
