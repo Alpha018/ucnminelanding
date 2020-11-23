@@ -10,6 +10,6 @@ export const environment = {
     host: ''
   },
   mcServerBackend: {
-    serverId: '5f4b1ccaafcf49a9c840cc43'
+    serverId: 'fb159395-ee5f-488f-bc80-2a5ed4de7ec6'
   }
 };
