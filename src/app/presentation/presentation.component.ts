@@ -1,11 +1,11 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {ServerService} from '../service/server.service';
 import {MCData} from '../types/request';
-import {ContentfulService} from "../service/contentful/contentful.service";
-import {CarouselServer, CarouselUser} from "../types/contentfulResponse";
-import {Entry} from "contentful";
-import {GoogleAnalyticsService} from "mugan86-ng-google-analytics";
-import {Router} from "@angular/router";
+import {ContentfulService} from '../service/contentful/contentful.service';
+import {CarouselServer, CarouselUser} from '../types/contentfulResponse';
+import {Entry} from 'contentful';
+import {GoogleAnalyticsService} from 'mugan86-ng-google-analytics';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-presentation',

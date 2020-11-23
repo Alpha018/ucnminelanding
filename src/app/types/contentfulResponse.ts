@@ -1,3 +1,19 @@
+export interface Reward {
+  title: string;
+  items: {
+    basic: ItemReward[];
+    mid: ItemReward[];
+    rare: ItemReward[];
+    ultra: ItemReward[];
+  }
+}
+
+export interface ItemReward {
+  item: string;
+  qty: number;
+  probability: number;
+}
+
 export interface Rules {
   version: string;
   rules: any;

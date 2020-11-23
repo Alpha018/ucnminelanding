@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {createClient, Entry} from 'contentful';
 import {environment} from '../../../environments/environment'
-import {Blog, CarouselServer, CarouselUser, Rules, ShopItem, UserAchievements} from "../../types/contentfulResponse";
+import {Blog, CarouselServer, CarouselUser, Reward, Rules, ShopItem, UserAchievements} from '../../types/contentfulResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -16,14 +16,14 @@ export class ContentfulService {
 
   constructor() { }
 
-  async getUserCarousel(): Promise<Entry<CarouselUser>[]>{
+  async getUserCarousel(): Promise<Entry<CarouselUser>[]> {
     const data = await this.cdaClient.getEntries<CarouselUser>(Object.assign({
       content_type: 'carouselUsers'
     }));
     return data.items;
   }
 
-  async getServerCarousel(): Promise<Entry<CarouselServer>[]>{
+  async getServerCarousel(): Promise<Entry<CarouselServer>[]> {
     const data = await this.cdaClient.getEntries<CarouselServer>(Object.assign({
       content_type: 'carruselServer'
     }));
@@ -54,5 +54,9 @@ export class ContentfulService {
       'fields.id': id,
     }));
     return data.items.length > 0 ? data.items[0] : null;
+  }
+
+  async getRewards(): Promise<Entry<Reward>> {
+    return this.cdaClient.getEntry<any>('2LxadHVkR3j3vqbm4H15RP');
   }
 }
