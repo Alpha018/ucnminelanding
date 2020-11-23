@@ -26,6 +26,7 @@ export class TransactionService {
       userName
     }, {
       headers: {
+        'x-service-authorization': `mcServer ${environment.mcServerBackend.serverId}`,
         'x-device-authorization': `reCAPTCHA ${tokenRecaptcha}`
       }
     })

@@ -1,8 +1,8 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
 import {MCData} from '../../types/request';
 import {ServerService} from '../../service/server.service';
-import {Router} from "@angular/router";
-import {GoogleAnalyticsService} from "mugan86-ng-google-analytics";
+import {Router} from '@angular/router';
+import {GoogleAnalyticsService} from 'mugan86-ng-google-analytics';
 
 @Component({
   selector: 'app-navbar',
@@ -61,6 +61,11 @@ export class NavbarComponent implements OnInit {
   goShop() {
     this.googleAnalyticsService.eventEmitter('shop', 'GO_SHOP_NAVBAR');
     this.router.navigate(['/shop']);
+  }
+
+  goVote() {
+    this.googleAnalyticsService.eventEmitter('shop', 'GO_VOTE_NAVBAR');
+    this.router.navigate(['/vote']);
   }
 
   goAchievements() {

@@ -1,0 +1,125 @@
+<section>
+  <div class="page-header page-header-small"
+       style="background-image: url('https://images.ctfassets.net/kad98swp6atl/3n1evI7eUj0kDGiETPWxoL/7354670764d3702eb7a853f06c411797/minecraft_landscape.jpg?fm=jpg')">
+    <div class="content-center">
+      <div class="container">
+        <h1>Votaciones</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="section section-container" style="padding-bottom: 0">
+      <div class="title" style="text-align: center; margin-top: 0">
+        <h3>Sistema de votación y recompensa</h3>
+      </div>
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="card card-plain card-blog">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="card-body">
+                <p class="card-description">
+                  Actualmente hemos implementado un sistema de votaciones para los diversos jugadores de UCN Craft.
+                </p>
+
+                <p class="card-description">
+                  ¿Qué significa esto?
+                  <br>
+                  Simple, tú nos ayudas con tu voto y nosotros te regalamos algunos items dentro del servidor, tienes
+                  una probabilidad de obtener ciertos items, la tabla estará a continuación.
+                </p>
+
+                <p class="card-description">
+                  ¿Como funciona esto?
+                  <br>
+                  Si ingresas con el siguiente botón puedes votar con tu nombre de usuario. Solo ingresa tu nickname y
+                  en un máximo de 5 minutos llegará a tu usuario uno de los diversos items que tenemos para regalar,
+                  puedes ver la siguiente tabla para ver qué cosas puedes obtener, recuerda que es solo un item por
+                  voto.
+                </p>
+
+                <p class="card-description">
+                  RECUERDA
+                  <br>
+                  Debes estar conectado en el servidor para poder obtener tu premio por ayudar al servidor. Además, hay
+                  un máximo de 5 minutos para poder recibir tu regalo, se paciente.
+                </p>
+
+                <button class="btn btn-info mr-1" type="button" (click)="goToVote()" style="margin-top: 15px">
+                  Pulsa aquí para votar
+                  <i class="fa fa-heart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-5" style="padding-top: 50px">
+              <div class="card-image">
+                <img alt="card" class="img mx-auto d-block"
+                     src="https://images.ctfassets.net/kad98swp6atl/2cFTwCsBiEPIOV9zMArhdp/ec35e2f180486cd8eac467838b2bb6f6/vote4rewards.png?w=500&h=280&q=100&fm=jpg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="title col-md-12" style="text-align: center">
+          <h3>Items de recompensa</h3>
+        </div>
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              <tr>
+                <th>Item</th>
+                <th>Cantidad</th>
+                <th class="text-center">Probabilidad de obtención</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th colspan="3" class="text-center">Básicos</th>
+              </tr>
+              <tr *ngFor="let reward of rewards.fields.items.basic">
+                <td>{{reward.item}}</td>
+                <td class="text-center">{{reward.qty}}</td>
+                <td class="text-center">{{reward.probability}} %</td>
+              </tr>
+
+              <tr>
+                <th colspan="3" class="text-center">Medios</th>
+              </tr>
+              <tr *ngFor="let reward of rewards.fields.items.mid">
+                <td>{{reward.item}}</td>
+                <td class="text-center">{{reward.qty}}</td>
+                <td class="text-center">{{reward.probability}} %</td>
+              </tr>
+
+              <tr>
+                <th colspan="3" class="text-center">Raros</th>
+              </tr>
+              <tr *ngFor="let reward of rewards.fields.items.rare">
+                <td>{{reward.item}}</td>
+                <td class="text-center">{{reward.qty}}</td>
+                <td class="text-center">{{reward.probability}} %</td>
+              </tr>
+
+              <tr>
+                <th colspan="3" class="text-center">Ultra Raros</th>
+              </tr>
+              <tr *ngFor="let reward of rewards.fields.items.ultra">
+                <td>{{reward.item}}</td>
+                <td class="text-center">{{reward.qty}}</td>
+                <td class="text-center">{{reward.probability}} %</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

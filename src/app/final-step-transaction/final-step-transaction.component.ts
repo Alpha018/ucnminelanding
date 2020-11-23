@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {select, Store} from "@ngrx/store";
-import {Router} from "@angular/router";
-import {ContentfulService} from "../service/contentful/contentful.service";
-import {appState} from "../reducer/transaction.reducer";
-import {Observable} from "rxjs";
-import {InitTransactionRequest, TransactionService} from "../service/transaction/transaction.service";
+import {select, Store} from '@ngrx/store';
+import {Router} from '@angular/router';
+import {ContentfulService} from '../service/contentful/contentful.service';
+import {appState} from '../reducer/transaction.reducer';
+import {Observable} from 'rxjs';
+import {InitTransactionRequest, TransactionService} from '../service/transaction/transaction.service';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
 
 @Component({
@@ -53,7 +53,8 @@ export class FinalStepTransactionComponent implements OnInit {
     const captchaKey = await this.recaptchaV3Service.execute('importantAction').toPromise();
 
     try {
-      const result = await this.transactionService.getUrlInitTransaction(this.plan, payMethod, userName, captchaKey).toPromise() as InitTransactionRequest;
+      const result = await this.transactionService.getUrlInitTransaction('VIP', payMethod, userName, captchaKey)
+        .toPromise() as InitTransactionRequest;
       window.open(`${result.url}?token_ws=${result.token}`, '_self')
     } catch (e) {
       console.log(e);
