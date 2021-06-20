@@ -1,4 +1,4 @@
-# [Landing Page UCN Craft](https://ucncraft.cl)
+# [Landing Page Taco Craft](https://ucncraft.cl)
 
 This is a landing page created in Angular 9 with Paper Kit 2 with template
 

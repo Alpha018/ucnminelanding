@@ -14,11 +14,11 @@
         <h2 class="title">Ultimas Noticias</h2>
         <br>
         <ng-container *ngFor="let blog of blogs; let odd = odd">
-          <div class="card card-plain card-blog margin-card" *ngIf="!odd">
+          <div class="card card-plain card-blog margin-card" *ngIf="!odd && blog.fields">
             <div class="row">
               <div class="col-md-5">
                 <div class="card-image">
-                  <img [alt]="blog.fields.photo.fields.title" class="img" [src]="blog.fields.photo.fields.file.url + '?w=366&h=275&fm=jpg&q=100&fit=scale'">
+                  <img [alt]="blog.fields.photo?.fields.title" class="img" [src]="blog.fields.photo?.fields.file.url + '?w=366&h=275&fm=jpg&q=100&fit=scale'">
                 </div>
               </div>
               <div class="col-md-7">
@@ -37,7 +37,7 @@
             </div>
           </div>
 
-          <div class="card card-plain card-blog margin-card" *ngIf="odd">
+          <div class="card card-plain card-blog margin-card" *ngIf="odd && blog.fields">
             <div class="row">
               <div class="col-md-7">
                 <div class="card-body">
@@ -54,7 +54,7 @@
               </div>
               <div class="col-md-5">
                 <div class="card-image">
-                  <img [alt]="blog.fields.photo.fields.title" class="img" [src]="blog.fields.photo.fields.file.url + '?w=366&h=275&fm=jpg&q=100&fit=scale'">
+                  <img [alt]="blog.fields.photo?.fields.title" class="img" [src]="blog.fields.photo?.fields.file.url + '?w=366&h=275&fm=jpg&q=100&fit=scale'">
                 </div>
               </div>
             </div>
