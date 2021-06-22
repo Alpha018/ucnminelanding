@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  backendUrl: 'http://localhost:3333',
+  backendUrl: 'https://ucn-craft-service-staging.herokuapp.com',
   mcKey: 'BB5ZLRc5NJxGVC9A6ViKJNbAxZcmiMJEYC',
   recaptchaKey: '6LdQtrwZAAAAANBc3OVR_VuYMMnZhKbQVr8avok_',
   analyticsId: 'UA-175987528-1',
